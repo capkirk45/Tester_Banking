@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Business", "Core.Busin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DataAccess", "Core.DataAccess\Core.DataAccess.csproj", "{91793371-1C74-46E6-BF2B-689463728D0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Web", "API.Web\API.Web.csproj", "{5115B0F1-11F4-4B6F-8EF4-1809EC1969B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API", "API.Web\Web.API.csproj", "{5115B0F1-11F4-4B6F-8EF4-1809EC1969B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Web.Tests", "API.Web.Tests\API.Web.Tests.csproj", "{F55B52E5-8D33-4145-9867-8F1AAF5A4908}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Tests", "API.Web.Tests\Web.API.Tests.csproj", "{F55B52E5-8D33-4145-9867-8F1AAF5A4908}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.Console", "Client.Console\Client.Console.csproj", "{B3C0A4C5-7EC0-457F-B24F-21329CEAF948}"
 EndProject
