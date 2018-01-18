@@ -1,0 +1,6 @@
+C:\workspaces\gitprojects\AltSourceInterviewProject\AltSourceInterviewProject\bin\Debug\AltSourceInterviewProject.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\AltSourceInterviewProject\bin\Debug\AltSourceInterviewProject.pdb
+C:\workspaces\gitprojects\AltSourceInterviewProject\AltSourceInterviewProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\AltSourceInterviewProject\obj\Debug\Core.Tests.csprojResolveAssemblyReference.cache
+C:\workspaces\gitprojects\AltSourceInterviewProject\AltSourceInterviewProject\obj\Debug\AltSourceInterviewProject.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\AltSourceInterviewProject\obj\Debug\AltSourceInterviewProject.pdb

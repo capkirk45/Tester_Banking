@@ -1,0 +1,13 @@
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\BankingWebAPI.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\BankingWebAPI.pdb
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\Newtonsoft.Json.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\System.Net.Http.Formatting.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\System.Web.Http.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\System.Web.Http.WebHost.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\Newtonsoft.Json.xml
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\System.Net.Http.Formatting.xml
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\System.Web.Http.xml
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\bin\Debug\System.Web.Http.WebHost.xml
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\obj\Debug\BankingWeb.API.csprojResolveAssemblyReference.cache
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\obj\Debug\BankingWebAPI.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\BankingWebAPI\obj\Debug\BankingWebAPI.pdb

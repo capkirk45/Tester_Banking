@@ -1,0 +1,4 @@
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\Core.Business.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\Core.Business.pdb
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\obj\Debug\Core.Business.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\obj\Debug\Core.Business.pdb
