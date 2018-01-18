@@ -1,0 +1,4 @@
+C:\workspaces\gitprojects\AltSourceInterviewProject\WebAPI.Tests\bin\Debug\WebAPI.Tests.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\WebAPI.Tests\bin\Debug\WebAPI.Tests.pdb
+C:\workspaces\gitprojects\AltSourceInterviewProject\WebAPI.Tests\obj\Debug\WebAPI.Tests.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\WebAPI.Tests\obj\Debug\WebAPI.Tests.pdb

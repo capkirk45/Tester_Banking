@@ -1,0 +1,5 @@
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Data\bin\Debug\Core.Data.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Data\bin\Debug\Core.Data.pdb
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Data\obj\Debug\Core.DataAccess.csprojResolveAssemblyReference.cache
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Data\obj\Debug\Core.Data.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Data\obj\Debug\Core.Data.pdb

@@ -1,0 +1,6 @@
+C:\workspaces\gitprojects\AltSourceInterviewProject\Console\bin\Debug\Console.exe.config
+C:\workspaces\gitprojects\AltSourceInterviewProject\Console\bin\Debug\Console.exe
+C:\workspaces\gitprojects\AltSourceInterviewProject\Console\bin\Debug\Console.pdb
+C:\workspaces\gitprojects\AltSourceInterviewProject\Console\obj\Debug\FrontEndConsole.csprojResolveAssemblyReference.cache
+C:\workspaces\gitprojects\AltSourceInterviewProject\Console\obj\Debug\Console.exe
+C:\workspaces\gitprojects\AltSourceInterviewProject\Console\obj\Debug\Console.pdb
