@@ -1,5 +1,0 @@
-C:\workspaces\gitprojects\AltSourceInterviewProject\Core\bin\Debug\Core.dll
-C:\workspaces\gitprojects\AltSourceInterviewProject\Core\bin\Debug\Core.pdb
-C:\workspaces\gitprojects\AltSourceInterviewProject\Core\obj\Debug\Core.Common.csprojResolveAssemblyReference.cache
-C:\workspaces\gitprojects\AltSourceInterviewProject\Core\obj\Debug\Core.dll
-C:\workspaces\gitprojects\AltSourceInterviewProject\Core\obj\Debug\Core.pdb
