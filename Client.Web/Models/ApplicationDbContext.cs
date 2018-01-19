@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 
-namespace BankingWeb.Client.Models
+namespace Client.Web.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

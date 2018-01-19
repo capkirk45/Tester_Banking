@@ -7,11 +7,11 @@ using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Logging;
-using BankingWeb.Client.Models;
-using BankingWeb.Client.Services;
-using BankingWeb.Client.ViewModels.Manage;
+using Client.Web.Models;
+using Client.Web.Services;
+using Client.Web.ViewModels.Manage;
 
-namespace BankingWeb.Client.Controllers
+namespace Client.Web.Controllers
 {
     [Authorize]
     public class ManageController : Controller

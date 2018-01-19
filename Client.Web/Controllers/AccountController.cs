@@ -9,11 +9,11 @@ using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Logging;
-using BankingWeb.Client.Models;
-using BankingWeb.Client.Services;
-using BankingWeb.Client.ViewModels.Account;
+using Client.Web.Models;
+using Client.Web.Services;
+using Client.Web.ViewModels.Account;
 
-namespace BankingWeb.Client.Controllers
+namespace Client.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller

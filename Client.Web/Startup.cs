@@ -9,10 +9,10 @@ using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using BankingWeb.Client.Models;
-using BankingWeb.Client.Services;
+using Client.Web.Models;
+using Client.Web.Services;
 
-namespace BankingWeb.Client
+namespace Client.Web
 {
     public class Startup
     {

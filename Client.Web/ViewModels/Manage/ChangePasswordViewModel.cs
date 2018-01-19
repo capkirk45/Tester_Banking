@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BankingWeb.Client.ViewModels.Manage
+namespace Client.Web.ViewModels.Manage
 {
     public class ChangePasswordViewModel
     {

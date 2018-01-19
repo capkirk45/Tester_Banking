@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 
-namespace BankingWeb.Client.Controllers
+namespace Client.Web.Controllers
 {
     public class HomeController : Controller
     {

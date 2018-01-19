@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BankingWeb.Client.ViewModels.Account
+namespace Client.Web.ViewModels.Account
 {
     public class ExternalLoginConfirmationViewModel
     {

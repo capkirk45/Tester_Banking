@@ -7,8 +7,8 @@
     <ProjectGuid>{91793371-1C74-46E6-BF2B-689463728D0C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core.Data</RootNamespace>
-    <AssemblyName>Core.Data</AssemblyName>
+    <RootNamespace>Core.DataAccess</RootNamespace>
+    <AssemblyName>Core.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -6,9 +6,9 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
-using BankingWeb.Client.Models;
+using Client.Web.Models;
 
-namespace BankingWeb.Client.Migrations
+namespace Client.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -98,7 +98,7 @@ namespace BankingWeb.Client.Migrations
                     b.HasAnnotation("Relational:TableName", "AspNetUserRoles");
                 });
 
-            modelBuilder.Entity("BankingWeb.Client.Models.ApplicationUser", b =>
+            modelBuilder.Entity("Client.Web.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id");
 
@@ -155,14 +155,14 @@ namespace BankingWeb.Client.Migrations
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("BankingWeb.Client.Models.ApplicationUser")
+                    b.HasOne("Client.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("BankingWeb.Client.Models.ApplicationUser")
+                    b.HasOne("Client.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
@@ -173,7 +173,7 @@ namespace BankingWeb.Client.Migrations
                         .WithMany()
                         .HasForeignKey("RoleId");
 
-                    b.HasOne("BankingWeb.Client.Models.ApplicationUser")
+                    b.HasOne("Client.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });

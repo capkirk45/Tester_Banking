@@ -1,5 +1,5 @@
 ﻿{
-  "userSecretsId": "aspnet5-BankingWeb.Client-f1d1944a-bb07-4985-99e9-c054a275d6fa",
+  "userSecretsId": "aspnet5-Client.Web-f1d1944a-bb07-4985-99e9-c054a275d6fa",
   "version": "1.0.0-*",
   "compilationOptions": {
     "emitEntryPoint": true

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc.Rendering;
 
-namespace BankingWeb.Client.ViewModels.Account
+namespace Client.Web.ViewModels.Account
 {
     public class SendCodeViewModel
     {
