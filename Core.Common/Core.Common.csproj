@@ -41,16 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\PrimaryAccount.cs" />
     <Compile Include="Entities\Claim.cs" />
-    <Compile Include="Entities\Credit.cs" />
-    <Compile Include="Entities\Debit.cs" />
     <Compile Include="Entities\Transaction.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserClaim.cs" />
+    <Compile Include="Enums\AccountTypeEnum.cs" />
     <Compile Include="Enums\ClaimTypeEnum.cs" />
-    <Compile Include="Interfaces\IDataMock.cs" />
+    <Compile Include="Interfaces\IAccount.cs" />
+    <Compile Include="Interfaces\IDataEntity.cs" />
     <Compile Include="Interfaces\IDataMockManager.cs" />
+    <Compile Include="Interfaces\ILedger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enums\TransactionTypeEnum.cs" />
   </ItemGroup>

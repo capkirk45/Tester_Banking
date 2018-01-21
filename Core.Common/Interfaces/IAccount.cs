@@ -1,4 +1,5 @@
 ﻿using Core.Common.Entities;
+using Core.Common.Enums;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace Core.Common.Interfaces
 {
-    public interface ITransactionManager
+    public interface IAccount
     {
-        void CreateTransaction(Transaction transaction);
-        IEnumerable ViewTransactionHistory(Account account);
+        ILedger Ledger { get; set; }
+        AccountTypeEnum AccountType { get; set; }
+        User AccountOwner { get; set; }
     }
 }

@@ -7,3 +7,5 @@ C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\Core
 C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\Core.Common.pdb
 C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\Core.DataAccess.pdb
 C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\obj\Debug\Core.Business.csprojResolveAssemblyReference.cache
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\log4net.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\log4net.xml
