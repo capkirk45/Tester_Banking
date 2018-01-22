@@ -1,6 +1,7 @@
 ﻿using Core.Common;
 using Core.Common.Entities;
 using Core.Common.Interfaces;
+using Core.Common.Enums;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,12 +36,12 @@ namespace Core.DataAccess
                     select qry).OrderBy(t => t.TransactionDate).ToList();
         }
 
-        public void CreateDebit(Transaction t)
+        public void DebitTheAccount(Transaction t)
         {
             _transactions.Add(t);
         }
 
-        public void CreateCredit(Transaction t)
+        public void CreditTheAccount(Transaction t)
         {
             _transactions.Add(t);
         }

@@ -8,8 +8,8 @@ namespace Core.Common.Interfaces
         IEnumerable ViewAllTransactionsByDate();
         IEnumerable ViewDebitsByDate();
         IEnumerable ViewCreditsByDate();
-        void CreateDebit(Transaction t);
-        void CreateCredit(Transaction t);
+        void DebitTheAccount(Transaction t);
+        void CreditTheAccount(Transaction t);
 
     }
 }

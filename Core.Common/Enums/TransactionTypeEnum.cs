@@ -1,4 +1,4 @@
-﻿namespace Core.Common
+﻿namespace Core.Common.Enums
 {
     public enum TransactionTypeEnum
     {

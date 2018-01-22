@@ -1,4 +1,5 @@
-﻿using Core.Common.Interfaces;
+﻿using Core.Common.Enums;
+using Core.Common.Interfaces;
 using System;
 
 namespace Core.Common.Entities

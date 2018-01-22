@@ -8,21 +8,22 @@ namespace Core.Business
 {
     public class AccountManager : IAccountManager
     {
-        private PrimaryAccount _account;
+        private IAccount _account;
 
         public AccountManager(IAccount account)
         {
-            //_account = account;
+            _account = account;
+
         }
 
 
         public void RecordDeposit(Transaction t)
         {
-            _account.Ledger.CreateDebit(t);
+            _account.Ledger.DebitTheAccount(t);
         }
         public void RecordWithdrawal(Transaction t)
         {
-            _account.Ledger.CreateCredit(t);
+            _account.Ledger.CreditTheAccount(t);
         }
 
         public IEnumerable ViewTransactionHistory(PrimaryAccount account)
