@@ -2,18 +2,24 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Core.Common.Entities;
 using Core.Common.Enums;
+using Core.Common.Interfaces;
 using Core.Business;
+using Core.Business.Factories;
 
-
-namespace AltSourceInterviewProject
+namespace Core.Tests
 {
     [TestClass]
-    public class TestAccountManager
+    public class TestAccountManager: TestBase
     {
         [TestMethod]
-        public void RecordADeposit()
+        public void TestCreateDebitTransaction()
         {
-            var acctMgr = new AccountManager(new PrimaryAccount());
+            var acctFactory = new AccountFactory();
+            IAccount primaryChecking = acctFactory.CreateInstance(AccountTypeEnum.PrimaryChecking);
+
+            var acctMgr = new AccountManager(primaryChecking);
+            primaryChecking.Ledger = new DataAccess.AccountRepo();
+
             var t = new Transaction()
             {
                 Id = 1,
@@ -22,7 +28,10 @@ namespace AltSourceInterviewProject
                 TransactionDateUtcOffset = DateTimeOffset.UtcNow,
                 Type = TransactionTypeEnum.Debit
             };
-            acctMgr.RecordDeposit(t);
+
+            acctMgr.CreateDepositOrCredit(t);
+
+            Assert.AreEqual(primaryChecking.Ledger.TransactionCount(), 1);
         }
     }
 }

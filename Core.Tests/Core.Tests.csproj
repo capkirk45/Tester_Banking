@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="TestAccountManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -73,6 +74,10 @@
     <ProjectReference Include="..\Core.Common\Core.Common.csproj">
       <Project>{769beacb-5f89-48f1-bbda-b90971669af6}</Project>
       <Name>Core.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.DataAccess\Core.DataAccess.csproj">
+      <Project>{91793371-1c74-46e6-bf2b-689463728d0c}</Project>
+      <Name>Core.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

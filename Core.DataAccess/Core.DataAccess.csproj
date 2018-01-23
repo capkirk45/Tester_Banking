@@ -48,12 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IAccountRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Ledger.cs" />
+    <Compile Include="Repositories\AccountRepo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
@@ -61,6 +60,10 @@
     <ProjectReference Include="..\Core.Common\Core.Common.csproj">
       <Project>{769beacb-5f89-48f1-bbda-b90971669af6}</Project>
       <Name>Core.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.DataStore\Core.DataStore.csproj">
+      <Project>{f79a7936-7637-4730-bc48-c177e8dc61ff}</Project>
+      <Name>Core.DataStore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

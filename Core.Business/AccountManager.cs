@@ -3,6 +3,7 @@ using Core.Common.Entities;
 using System.Collections;
 using Core.Business.Interfaces;
 using Core.Common.Interfaces;
+using System.Collections.Generic;
 
 namespace Core.Business
 {
@@ -14,29 +15,23 @@ namespace Core.Business
         {
             _account = account;
 
+
         }
 
 
-        public void RecordDeposit(Transaction t)
+        public void CreateDepositOrCredit(Transaction t)
         {
-            _account.Ledger.DebitTheAccount(t);
-        }
-        public void RecordWithdrawal(Transaction t)
-        {
-            _account.Ledger.CreditTheAccount(t);
+            if (_account == null || _account.Ledger == null) throw new Exception("A valid Account is needed");
+            _account.Ledger.Add(t);
         }
 
-        public IEnumerable ViewTransactionHistory(PrimaryAccount account)
-        {
-            return _account.Ledger.ViewAllTransactionsByDate();
-        }
-
-        public IEnumerable ViewTransactionHistory(IAccount account)
+   
+        public List<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt)
         {
             throw new NotImplementedException();
         }
 
-        public decimal CheckBalance(ILedger ledger)
+        public decimal CheckBalance(List<Transaction> ledger)
         {
             throw new NotImplementedException();
         }
