@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Core.Common.Entities;
 
 namespace Core.DataStore
 {
@@ -12,13 +9,16 @@ namespace Core.DataStore
     public class MasterLedger
     {
         private static MasterLedger _instance = null;
-        private static readonly object mutex = new object();
+        private static readonly object _mutex = new object();
+        private List<Transaction> _ledger;
 
         private MasterLedger(){ }
 
-        public static MasterLedger GetInstance { get
+        public static MasterLedger GetInstance
+        {
+            get
             {
-                lock (mutex)
+                lock (_mutex)
                 {
                     if (_instance == null)
                     {
@@ -29,6 +29,18 @@ namespace Core.DataStore
                         return _instance;
                     }
                 }
+            }
+        }
+
+        public List<Transaction> Ledger()
+        {
+            if (_ledger == null)
+            {
+                return new List<Transaction>();
+            }
+            else
+            {
+                return _ledger;
             }
         }
     }
