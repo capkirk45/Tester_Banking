@@ -5,6 +5,8 @@ using Core.Common.Enums;
 using Core.Common.Interfaces;
 using Core.Business;
 using Core.Business.Factories;
+using Core.DataAccess;
+using System.Collections.Generic;
 
 namespace Core.Tests
 {
@@ -14,11 +16,6 @@ namespace Core.Tests
         [TestMethod]
         public void TestCreateDebitTransaction()
         {
-            var acctFactory = new AccountFactory();
-            IAccount primaryChecking = acctFactory.CreateInstance(AccountTypeEnum.PrimaryChecking);
-
-            var acctMgr = new AccountManager(primaryChecking);
-            primaryChecking.Ledger = new DataAccess.AccountRepo();
 
             var t = new Transaction()
             {
@@ -29,9 +26,10 @@ namespace Core.Tests
                 Type = TransactionTypeEnum.Debit
             };
 
-            acctMgr.CreateDepositOrCredit(t);
-
-            Assert.AreEqual(primaryChecking.Ledger.TransactionCount(), 1);
+            _acctMgr.CreateDepositOrCredit(t);
+            var ledger = _acctMgr.ViewLedgerByDateRange(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(1));
+            Assert.AreEqual(ledger.Count, 1);
         }
     }
 }
+    

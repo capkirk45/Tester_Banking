@@ -1,34 +1,33 @@
 ﻿using System;
 using Core.Common.Entities;
-using System.Collections;
 using Core.Business.Interfaces;
 using Core.Common.Interfaces;
 using System.Collections.Generic;
+using Core.DataAccess;
 
 namespace Core.Business
 {
     public class AccountManager : IAccountManager
     {
         private IAccount _account;
+        private IUnitOfWork _uow;
 
-        public AccountManager(IAccount account)
+        public AccountManager(IAccount account, IUnitOfWork uow)
         {
             _account = account;
-
-
+            _uow = uow;
         }
-
 
         public void CreateDepositOrCredit(Transaction t)
         {
-            if (_account == null || _account.Ledger == null) throw new Exception("A valid Account is needed");
-            _account.Ledger.Add(t);
+            if (t == null) throw new Exception("The transaction is not valid");
+            _uow.AccountRepository.DebitOrCreditAccount(t);
         }
 
    
         public List<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt)
         {
-            throw new NotImplementedException();
+            return _uow.AccountRepository.GetLedgerByDateRange(fromDt, toDt);
         }
 
         public decimal CheckBalance(List<Transaction> ledger)

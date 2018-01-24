@@ -1,65 +1,81 @@
 ﻿using Core.Common.Entities;
-using Core.Common.Interfaces;
 using Core.Common.Enums;
-using Core.DataAccess.Interfaces;
-using Core.DataStore;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Core.Common.Interfaces;
 
 namespace Core.DataAccess
 {
     /// <summary>
     /// Purpose:  CRUD processing against Data Store
     /// </summary>
-    public class AccountRepo: IAccountRepo
+    public class AccountRepo : IAccountRepo, IDisposable
     {
-        private List<Transaction> _transactions;
-        private MasterLedger _masterLedger;
-        
+        private bool _disposed = false;
+        private UnitOfWork _uow;
 
-        public AccountRepo() { }
-
-        public AccountRepo(List<Transaction> transactions)
+        public AccountRepo(IUnitOfWork uow)
         {
-            _transactions = transactions;
-            _masterLedger = MasterLedger.GetInstance;
+            _uow = uow as UnitOfWork;
+            _uow.MasterLedger.SetLedger();
         }
 
-        public IEnumerable GetAllTransactionsByDate()
+        public List<Transaction> GetLedgerByDateRange(DateTime fromDt, DateTime toDt)
         {
-            return (from qry in _transactions
+            return (from qry in _uow.MasterLedger.Ledger
+                    where qry.TransactionDate > fromDt && qry.TransactionDate < toDt
                     select qry).OrderBy(t => t.TransactionDate).ToList();
         }
 
         public int TransactionCount()
         {
-            return _transactions.Count();
+            return _uow.MasterLedger.Ledger.Count();
         }
 
-        public IEnumerable GetLedgerByDateRange()
+        public List<Transaction> GetLedgerByDateRange()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable GetAllDebits()
+        public List<Transaction> GetAllDebits()
         {
-            return (from qry in _transactions
+            return (from qry in _uow.MasterLedger.Ledger
                     where qry.Type == TransactionTypeEnum.Debit
                     select qry).OrderBy(t => t.TransactionDate).ToList();
         }
 
-        public IEnumerable GetAllCredits()
+        public List<Transaction> GetAllCredits()
         {
-            return (from qry in _transactions
+            return (from qry in _uow.MasterLedger.Ledger
                     where qry.Type == TransactionTypeEnum.Credit
                     select qry).OrderBy(t => t.TransactionDate).ToList();
         }
 
-        public void DebitOrCreditAccount(Transaction t, out List<Transaction> ledger)
+        public void DebitOrCreditAccount(Transaction t)
         {
-            ledger.Add(t);
+            _uow.MasterLedger.Ledger.Add(t);
         }
+
+        #region IDisposable members
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this._disposed)
+            {
+                if (disposing)
+                {
+                    //do not dispose the connection here as it was passed in and should be disposed via the uow
+                }
+            }
+            this._disposed = true;
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        #endregion
+
     }
 }

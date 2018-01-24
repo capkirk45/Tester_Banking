@@ -32,15 +32,13 @@ namespace Core.DataStore
             }
         }
 
-        public List<Transaction> Ledger()
+        public List<Transaction> Ledger { get { return _ledger; } }
+
+        public void SetLedger()
         {
             if (_ledger == null)
             {
-                return new List<Transaction>();
-            }
-            else
-            {
-                return _ledger;
+                _ledger = new List<Transaction>();
             }
         }
     }
