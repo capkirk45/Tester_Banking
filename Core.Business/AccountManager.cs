@@ -20,7 +20,7 @@ namespace Core.Business
             _uow = uow;
         }
 
-        public void RecordDepositOrCredit(Transaction t)
+        public void RecordDepositOrWithdrawal(Transaction t)
         {
             if (t == null) throw new Exception("The transaction is not valid");
             _uow.AccountRepository.DebitOrCreditAccount(t);

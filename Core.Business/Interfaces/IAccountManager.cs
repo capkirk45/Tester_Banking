@@ -6,7 +6,7 @@ namespace Core.Business.Interfaces
 {
     public interface IAccountManager
     {
-        void RecordDepositOrCredit(Transaction t);
+        void RecordDepositOrWithdrawal(Transaction t);
         List<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt);
         List<Transaction> ViewAllDeposits();
         List<Transaction> ViewAllWithdrawals();
