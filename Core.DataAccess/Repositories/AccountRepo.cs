@@ -1,6 +1,5 @@
 ﻿using Core.Common.Entities;
 using Core.Common.Enums;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
@@ -27,7 +26,7 @@ namespace Core.DataAccess
         {
             return (from qry in _uow.MasterLedger.Ledger
                     where qry.TransactionDate > fromDt && qry.TransactionDate < toDt
-                    select qry).OrderBy(t => t.TransactionDate).ToList();
+                        select qry).OrderBy(t => t.TransactionDate).ToList();
         }
 
         public int TransactionCount()
@@ -35,23 +34,18 @@ namespace Core.DataAccess
             return _uow.MasterLedger.Ledger.Count();
         }
 
-        public List<Transaction> GetLedgerByDateRange()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Transaction> GetAllDebits()
         {
             return (from qry in _uow.MasterLedger.Ledger
                     where qry.Type == TransactionTypeEnum.Debit
-                    select qry).OrderBy(t => t.TransactionDate).ToList();
+                        select qry).OrderBy(t => t.TransactionDate).ToList();
         }
 
         public List<Transaction> GetAllCredits()
         {
             return (from qry in _uow.MasterLedger.Ledger
                     where qry.Type == TransactionTypeEnum.Credit
-                    select qry).OrderBy(t => t.TransactionDate).ToList();
+                        select qry).OrderBy(t => t.TransactionDate).ToList();
         }
 
         public void DebitOrCreditAccount(Transaction t)
@@ -71,6 +65,25 @@ namespace Core.DataAccess
                 return max.Id + 1;
             }
         }
+
+        public decimal GetDebitTotalAmt()
+        {
+            return (from qry
+                    in _uow.MasterLedger.Ledger
+                    where qry.Type == TransactionTypeEnum.Debit 
+                        select qry).Sum(c => c.Amt);
+        }
+
+        public decimal GetCreditTotalAmt()
+        {
+            return (from qry
+                    in _uow.MasterLedger.Ledger
+                    where qry.Type == TransactionTypeEnum.Credit
+                    select qry).Sum(c => c.Amt);
+        }
+        
+
+
         #region IDisposable members
         protected virtual void Dispose(bool disposing)
         {
@@ -88,6 +101,7 @@ namespace Core.DataAccess
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
         #endregion
 
     }

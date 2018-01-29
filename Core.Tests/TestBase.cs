@@ -4,6 +4,7 @@ using Core.Common.Entities;
 using Core.Common.Enums;
 using Core.Common.Interfaces;
 using Core.DataAccess;
+using System;
 using System.Collections.Generic;
 
 namespace Core.Tests
@@ -24,5 +25,21 @@ namespace Core.Tests
             _uow = new UnitOfWork();
             _acctMgr = new AccountManager(_primaryChecking, _uow);
         }
+
+        protected Transaction MockTransaction(TransactionTypeEnum type, decimal amt)
+        {
+            var id = _uow.AccountRepository.CreateId();
+            if (id == 0) throw new Exception("A valid ID could not be created");
+            var t = new Transaction()
+            {
+                Id = id,
+                Amt = amt,
+                TransactionDate = DateTime.UtcNow,
+                TransactionDateUtcOffset = DateTimeOffset.UtcNow,
+                Type = type
+            };
+            return t;
+        }
+
     }
 }

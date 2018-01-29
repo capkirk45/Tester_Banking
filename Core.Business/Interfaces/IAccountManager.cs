@@ -8,7 +8,9 @@ namespace Core.Business.Interfaces
     {
         void RecordDepositOrCredit(Transaction t);
         List<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt);
-        decimal CheckBalance(List<Transaction> ledger);
-        
+        List<Transaction> ViewAllDeposits();
+        List<Transaction> ViewAllWithdrawals();
+        decimal GetAccountBalance(List<Transaction> ledger);
+       
     }
 }

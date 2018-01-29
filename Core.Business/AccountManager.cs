@@ -3,7 +3,6 @@ using Core.Common.Entities;
 using Core.Business.Interfaces;
 using Core.Common.Interfaces;
 using System.Collections.Generic;
-using Core.Common.Enums;
 
 namespace Core.Business
 {
@@ -30,21 +29,25 @@ namespace Core.Business
    
         public List<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt)
         {
+            //Force an actual date so we don't fetch too much data and bog system down  
+            if (fromDt == null) throw new Exception("A valid date range is needed");
+            if (toDt == null) toDt = DateTime.UtcNow;
             return _uow.AccountRepository.GetLedgerByDateRange(fromDt, toDt);
         }
 
-        public decimal CheckBalance(List<Transaction> ledger)
+        public decimal GetAccountBalance(List<Transaction> ledger)
         {
-            decimal debits = 0;
-            decimal credits = 0;
-            foreach (Transaction t in ledger)
-            {
-                if (t.Type == TransactionTypeEnum.Debit)
-                    debits = debits + t.Amt;
-                else
-                    credits = credits + t.Amt;
-            }
-            return debits - credits;
+            return _uow.AccountRepository.GetDebitTotalAmt() - _uow.AccountRepository.GetCreditTotalAmt();
+        }
+
+        public List<Transaction> ViewAllDeposits()
+        {
+            return _uow.AccountRepository.GetAllDebits();
+        }
+        
+        public List<Transaction> ViewAllWithdrawals()
+        {
+            return _uow.AccountRepository.GetAllCredits();
         }
 
     }

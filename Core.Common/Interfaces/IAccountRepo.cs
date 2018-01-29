@@ -1,6 +1,5 @@
 ﻿using Core.Common.Entities;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Core.Common.Interfaces
@@ -11,9 +10,10 @@ namespace Core.Common.Interfaces
         List<Transaction> GetAllDebits();
         List<Transaction> GetAllCredits();
         void DebitOrCreditAccount(Transaction t);
-
         int TransactionCount();
         int CreateId();
+        decimal GetDebitTotalAmt();
+        decimal GetCreditTotalAmt();
 
     }
 }
