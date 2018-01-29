@@ -6,8 +6,9 @@ namespace Core.Business.Interfaces
 {
     public interface IAccountManager
     {
-        void CreateDepositOrCredit(Transaction t);
+        void RecordDepositOrCredit(Transaction t);
         List<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt);
         decimal CheckBalance(List<Transaction> ledger);
+        
     }
 }

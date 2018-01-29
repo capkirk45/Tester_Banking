@@ -3,10 +3,13 @@ using Core.Common.Entities;
 using Core.Business.Interfaces;
 using Core.Common.Interfaces;
 using System.Collections.Generic;
-using Core.DataAccess;
+using Core.Common.Enums;
 
 namespace Core.Business
 {
+    /// <summary>
+    /// Domain / Business logical processing
+    /// </summary>
     public class AccountManager : IAccountManager
     {
         private IAccount _account;
@@ -18,7 +21,7 @@ namespace Core.Business
             _uow = uow;
         }
 
-        public void CreateDepositOrCredit(Transaction t)
+        public void RecordDepositOrCredit(Transaction t)
         {
             if (t == null) throw new Exception("The transaction is not valid");
             _uow.AccountRepository.DebitOrCreditAccount(t);
@@ -32,7 +35,17 @@ namespace Core.Business
 
         public decimal CheckBalance(List<Transaction> ledger)
         {
-            throw new NotImplementedException();
+            decimal debits = 0;
+            decimal credits = 0;
+            foreach (Transaction t in ledger)
+            {
+                if (t.Type == TransactionTypeEnum.Debit)
+                    debits = debits + t.Amt;
+                else
+                    credits = credits + t.Amt;
+            }
+            return debits - credits;
         }
+
     }
 }

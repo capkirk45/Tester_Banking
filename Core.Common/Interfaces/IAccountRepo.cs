@@ -13,6 +13,7 @@ namespace Core.Common.Interfaces
         void DebitOrCreditAccount(Transaction t);
 
         int TransactionCount();
+        int CreateId();
 
     }
 }

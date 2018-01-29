@@ -4,7 +4,8 @@ using Core.Common.Entities;
 namespace Core.DataStore
 {
     /// <summary>
-    /// Provide data persistence.  Implementation will be a generic list using Singleton pattern
+    /// In-memory data store, taking place of a database.  
+    /// Implementation will be a generic list using Singleton pattern
     /// </summary>
     public class MasterLedger
     {

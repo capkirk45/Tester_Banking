@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using Core.Common.Interfaces;
+using MoreLinq;
 
 namespace Core.DataAccess
 {
@@ -58,6 +59,18 @@ namespace Core.DataAccess
             _uow.MasterLedger.Ledger.Add(t);
         }
 
+        public int CreateId()
+        {
+            if (_uow.MasterLedger.Ledger.Count == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                var max = _uow.MasterLedger.Ledger.MaxBy(i => i.Id);
+                return max.Id + 1;
+            }
+        }
         #region IDisposable members
         protected virtual void Dispose(bool disposing)
         {

@@ -11,3 +11,7 @@ C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\log4
 C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\log4net.xml
 C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\Core.DataStore.dll
 C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\Core.DataStore.pdb
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\MoreLinq.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\System.ValueTuple.dll
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\MoreLinq.xml
+C:\workspaces\gitprojects\AltSourceInterviewProject\Core.Business\bin\Debug\System.ValueTuple.xml
