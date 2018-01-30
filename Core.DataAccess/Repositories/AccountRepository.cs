@@ -11,18 +11,18 @@ namespace Core.DataAccess
     /// <summary>
     /// Purpose:  CRUD processing against Data Store
     /// </summary>
-    public class AccountRepo : IAccountRepo, IDisposable
+    public class AccountRepository : IAccountRepository, IDisposable
     {
         private bool _disposed = false;
         private UnitOfWork _uow;
 
-        public AccountRepo(IUnitOfWork uow)
+        public AccountRepository(IUnitOfWork uow)
         {
             _uow = uow as UnitOfWork;
             _uow.MasterLedger.SetLedger();
         }
 
-        public List<Transaction> GetLedgerByDateRange(DateTime fromDt, DateTime toDt)
+        public IEnumerable<Transaction> GetLedgerByDateRange(DateTime fromDt, DateTime toDt)
         {
             return (from qry in _uow.MasterLedger.Ledger
                     where qry.TransactionDate > fromDt && qry.TransactionDate < toDt
@@ -34,14 +34,14 @@ namespace Core.DataAccess
             return _uow.MasterLedger.Ledger.Count();
         }
 
-        public List<Transaction> GetAllDebits()
+        public IEnumerable<Transaction> GetAllDebits()
         {
             return (from qry in _uow.MasterLedger.Ledger
                     where qry.Type == TransactionTypeEnum.Debit
                         select qry).OrderBy(t => t.TransactionDate).ToList();
         }
 
-        public List<Transaction> GetAllCredits()
+        public IEnumerable<Transaction> GetAllCredits()
         {
             return (from qry in _uow.MasterLedger.Ledger
                     where qry.Type == TransactionTypeEnum.Credit
@@ -62,7 +62,7 @@ namespace Core.DataAccess
             else
             {
                 var max = _uow.MasterLedger.Ledger.MaxBy(i => i.Id);
-                return max.Id + 1;
+                return ++max.Id;
             }
         }
 

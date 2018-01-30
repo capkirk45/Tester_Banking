@@ -8,7 +8,7 @@ namespace Core.DataAccess
     /// </summary>
     public class UnitOfWork : IUnitOfWork
     {
-        private AccountRepo _accountRepo;
+        private AccountRepository _accountRepo;
         private MasterLedger _masterLedger;
 
         public UnitOfWork()
@@ -18,13 +18,13 @@ namespace Core.DataAccess
 
         public MasterLedger MasterLedger { get { return _masterLedger; } }
 
-        public IAccountRepo AccountRepository
+        public IAccountRepository AccountRepository
         {
             get
             {
                 if (_accountRepo == null)
                 {
-                    _accountRepo = new AccountRepo(this);
+                    _accountRepo = new AccountRepository(this);
                 }
                 return _accountRepo;
             }

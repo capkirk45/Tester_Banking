@@ -6,7 +6,7 @@ namespace Core.Common.Interfaces
 {
     public interface IAccount
     {
-        List<Transaction> Ledger { get; set; }
+        IEnumerable<Transaction> Ledger { get; set; }
         AccountTypeEnum AccountType { get; set; }
         User AccountOwner { get; set; }
     }

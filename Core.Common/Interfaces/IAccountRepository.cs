@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace Core.Common.Interfaces
 {
-    public interface IAccountRepo
+    public interface IAccountRepository
     {
-        List<Transaction> GetLedgerByDateRange(DateTime fromDt, DateTime toDt);
-        List<Transaction> GetAllDebits();
-        List<Transaction> GetAllCredits();
+        IEnumerable<Transaction> GetLedgerByDateRange(DateTime fromDt, DateTime toDt);
+        IEnumerable<Transaction> GetAllDebits();
+        IEnumerable<Transaction> GetAllCredits();
         void DebitOrCreditAccount(Transaction t);
         int TransactionCount();
         int CreateId();

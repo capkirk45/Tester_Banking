@@ -7,10 +7,10 @@ namespace Core.Business.Interfaces
     public interface IAccountManager
     {
         void RecordDepositOrWithdrawal(Transaction t);
-        List<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt);
-        List<Transaction> ViewAllDeposits();
-        List<Transaction> ViewAllWithdrawals();
-        decimal GetAccountBalance(List<Transaction> ledger);
+        IEnumerable<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt);
+        IEnumerable<Transaction> ViewAllDeposits();
+        IEnumerable<Transaction> ViewAllWithdrawals();
+        decimal GetAccountBalance(IEnumerable<Transaction> ledger);
        
     }
 }

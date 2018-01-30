@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Common.Entities
 {
-    public class UserClaim: IDataEntity
+    public class UserClaim
     {
         public User User { get; }
         public Claim Claim { get; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Core.Common.Entities
 {
-    public class Claim: IDataEntity
+    public class Claim
     {
         public int ClaimId { get; set; }
         public ClaimTypeEnum ClaimType { get; set; }

@@ -51,8 +51,7 @@
     <Compile Include="Enums\AccountTypeEnum.cs" />
     <Compile Include="Enums\ClaimTypeEnum.cs" />
     <Compile Include="Interfaces\IAccount.cs" />
-    <Compile Include="Interfaces\IAccountRepo.cs" />
-    <Compile Include="Interfaces\IDataEntity.cs" />
+    <Compile Include="Interfaces\IAccountRepository.cs" />
     <Compile Include="Interfaces\IDataMockManager.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

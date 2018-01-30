@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Core.Common.Enums;
@@ -16,7 +17,7 @@ namespace Core.Tests
 
             var ledger = _acctMgr.ViewLedgerByDateRange(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(1));
             var cnt = (from qry in ledger where qry.Id == t.Id select qry).Count();
-            Assert.AreEqual(ledger.Count, 1);
+            Assert.AreEqual(ledger.Count(), 1);
         }
 
         [TestMethod]
@@ -27,7 +28,7 @@ namespace Core.Tests
 
             var ledger = _acctMgr.ViewLedgerByDateRange(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(1));
             var cnt = (from qry in ledger where qry.Id == t.Id select qry).Count();
-            Assert.AreEqual(ledger.Count, cnt);
+            Assert.AreEqual(ledger.Count(), cnt);
         }
 
         [TestMethod]
@@ -41,7 +42,7 @@ namespace Core.Tests
             _acctMgr.RecordDepositOrWithdrawal(tcredit);
 
             var ledger = _acctMgr.ViewLedgerByDateRange(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(1));
-            Assert.AreEqual(ledger.Count, 2);
+            Assert.AreEqual(ledger.Count(), 2);
 
             var balance = _acctMgr.GetAccountBalance(ledger);
             Assert.AreEqual(balance, (tdebit.Amt = tcredit.Amt));
@@ -67,7 +68,7 @@ namespace Core.Tests
             _acctMgr.RecordDepositOrWithdrawal(tdeposit);
 
             var deposits = _acctMgr.ViewAllDeposits();
-            Assert.AreEqual(5, deposits.Count);
+            Assert.AreEqual(5, deposits.Count());
 
             var debitTotalAmt = (from qry in deposits
                                  select qry).Sum(t => t.Amt);
@@ -95,7 +96,7 @@ namespace Core.Tests
             _acctMgr.RecordDepositOrWithdrawal(twithdrawal);
 
             var withdrawals = _acctMgr.ViewAllWithdrawals();
-            Assert.AreEqual(5, withdrawals.Count);
+            Assert.AreEqual(5, withdrawals.Count());
 
             var withdrawalTotalAmt = (from qry in withdrawals
                                         select qry).Sum(t => t.Amt);

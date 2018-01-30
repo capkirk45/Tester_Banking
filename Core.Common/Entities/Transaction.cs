@@ -4,7 +4,7 @@ using System;
 
 namespace Core.Common.Entities
 {
-    public class Transaction: IDataEntity
+    public class Transaction
     {
         public int Id { get; set; }
         public TransactionTypeEnum Type { get; set; }

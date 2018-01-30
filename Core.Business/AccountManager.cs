@@ -27,7 +27,7 @@ namespace Core.Business
         }
 
    
-        public List<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt)
+        public IEnumerable<Transaction> ViewLedgerByDateRange(DateTime fromDt, DateTime toDt)
         {
             //Force an actual date so we don't fetch too much data and bog system down  
             if (fromDt == null) throw new Exception("A valid date range is needed");
@@ -35,17 +35,17 @@ namespace Core.Business
             return _uow.AccountRepository.GetLedgerByDateRange(fromDt, toDt);
         }
 
-        public decimal GetAccountBalance(List<Transaction> ledger)
+        public decimal GetAccountBalance(IEnumerable<Transaction> ledger)
         {
             return _uow.AccountRepository.GetDebitTotalAmt() - _uow.AccountRepository.GetCreditTotalAmt();
         }
 
-        public List<Transaction> ViewAllDeposits()
+        public IEnumerable<Transaction> ViewAllDeposits()
         {
             return _uow.AccountRepository.GetAllDebits();
         }
         
-        public List<Transaction> ViewAllWithdrawals()
+        public IEnumerable<Transaction> ViewAllWithdrawals()
         {
             return _uow.AccountRepository.GetAllCredits();
         }
