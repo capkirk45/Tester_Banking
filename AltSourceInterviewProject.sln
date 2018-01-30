@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1A270AEC-6549-4F90-87C6-FBDBCACBAF0D}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment.txt = Deployment.txt
+		Client.Web\global.json = Client.Web\global.json
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Business", "Core.Business\Core.Business.csproj", "{75A451A6-0D82-422A-8813-918DF2F48837}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.Console", "Client.Console\Client.Console.csproj", "{B3C0A4C5-7EC0-457F-B24F-21329CEAF948}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Client.Web", "Client.Web\Client.Web.xproj", "{3DA1D358-CB7F-44A4-A410-46BCBB2AFFED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common", "Core.Common\Core.Common.csproj", "{769BEACB-5F89-48F1-BBDA-B90971669AF6}"
 EndProject
@@ -18,11 +22,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API", "Web.API\Web.API.csproj", "{5115B0F1-11F4-4B6F-8EF4-1809EC1969B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Tests", "Web.API.Tests\Web.API.Tests.csproj", "{F55B52E5-8D33-4145-9867-8F1AAF5A4908}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1A270AEC-6549-4F90-87C6-FBDBCACBAF0D}"
-	ProjectSection(SolutionItems) = preProject
-		Client.Web\global.json = Client.Web\global.json
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DataStore", "Core.DataStore\Core.DataStore.csproj", "{F79A7936-7637-4730-BC48-C177E8DC61FF}"
 EndProject
@@ -40,10 +39,6 @@ Global
 		{B3C0A4C5-7EC0-457F-B24F-21329CEAF948}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3C0A4C5-7EC0-457F-B24F-21329CEAF948}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3C0A4C5-7EC0-457F-B24F-21329CEAF948}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3DA1D358-CB7F-44A4-A410-46BCBB2AFFED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3DA1D358-CB7F-44A4-A410-46BCBB2AFFED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3DA1D358-CB7F-44A4-A410-46BCBB2AFFED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3DA1D358-CB7F-44A4-A410-46BCBB2AFFED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{769BEACB-5F89-48F1-BBDA-B90971669AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{769BEACB-5F89-48F1-BBDA-B90971669AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{769BEACB-5F89-48F1-BBDA-B90971669AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,5 +66,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C572FD8-8F73-4078-B3C7-3C078779959F}
 	EndGlobalSection
 EndGlobal

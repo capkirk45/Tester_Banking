@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\transactionDTO.cs" />
     <Compile Include="Entities\AccountBase.cs" />
     <Compile Include="Entities\PrimaryChecking.cs" />
     <Compile Include="Entities\Claim.cs" />
