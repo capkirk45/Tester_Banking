@@ -21,10 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DataAccess", "Core.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DataStore", "Core.DataStore\Core.DataStore.csproj", "{F79A7936-7637-4730-BC48-C177E8DC61FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Banking", "Web.API.Banking\Web.API.Banking.csproj", "{8924B320-BE98-4FB0-A03C-D505C24BBD00}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Banking.Tests", "Web.API.Banking.Tests\Web.API.Banking.Tests.csproj", "{9C5B327C-3CB7-4D31-A992-31D5B5AAC165}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Client.Banking", "Web.Client.Banking\Web.Client.Banking.csproj", "{55B2818F-0C44-482E-B55D-D9C63CAD567A}"
 EndProject
 Global
@@ -57,14 +53,6 @@ Global
 		{F79A7936-7637-4730-BC48-C177E8DC61FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F79A7936-7637-4730-BC48-C177E8DC61FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F79A7936-7637-4730-BC48-C177E8DC61FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8924B320-BE98-4FB0-A03C-D505C24BBD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8924B320-BE98-4FB0-A03C-D505C24BBD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8924B320-BE98-4FB0-A03C-D505C24BBD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8924B320-BE98-4FB0-A03C-D505C24BBD00}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C5B327C-3CB7-4D31-A992-31D5B5AAC165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C5B327C-3CB7-4D31-A992-31D5B5AAC165}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C5B327C-3CB7-4D31-A992-31D5B5AAC165}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C5B327C-3CB7-4D31-A992-31D5B5AAC165}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55B2818F-0C44-482E-B55D-D9C63CAD567A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55B2818F-0C44-482E-B55D-D9C63CAD567A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55B2818F-0C44-482E-B55D-D9C63CAD567A}.Release|Any CPU.ActiveCfg = Release|Any CPU
