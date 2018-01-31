@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75A451A6-0D82-422A-8813-918DF2F48837}</ProjectGuid>
+    <ProjectGuid>{769BEACB-5F89-48F1-BBDA-B90971669AF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core.Business</RootNamespace>
-    <AssemblyName>Core.Business</AssemblyName>
+    <RootNamespace>Banking.Core.Common</RootNamespace>
+    <AssemblyName>Banking.Core.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -29,11 +29,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,25 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factories\AccountFactory.cs" />
-    <Compile Include="Interfaces\IAccountManager.cs" />
+    <Compile Include="DTOs\transactionDTO.cs" />
+    <Compile Include="Entities\AccountBase.cs" />
+    <Compile Include="Entities\PrimaryChecking.cs" />
+    <Compile Include="Entities\Claim.cs" />
+    <Compile Include="Entities\SecondaryChecking.cs" />
+    <Compile Include="Entities\Transaction.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserClaim.cs" />
+    <Compile Include="Enums\AccountTypeEnum.cs" />
+    <Compile Include="Enums\ClaimTypeEnum.cs" />
+    <Compile Include="Interfaces\IAccount.cs" />
+    <Compile Include="Interfaces\IAccountRepository.cs" />
+    <Compile Include="Interfaces\IDataMockManager.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AccountManager.cs" />
+    <Compile Include="Enums\TransactionTypeEnum.cs" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
-      <Project>{769beacb-5f89-48f1-bbda-b90971669af6}</Project>
-      <Name>Core.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Core.DataAccess\Core.DataAccess.csproj">
-      <Project>{91793371-1c74-46e6-bf2b-689463728d0c}</Project>
-      <Name>Core.DataAccess</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
