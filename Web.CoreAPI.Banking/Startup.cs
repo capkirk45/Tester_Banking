@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Web.CoreAPI.Banking
+namespace Banking.NETCore.API
 {
     public class Startup
     {

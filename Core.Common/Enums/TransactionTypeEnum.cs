@@ -1,4 +1,4 @@
-﻿namespace Core.Common.Enums
+﻿namespace Banking.Core.Common.Enums
 {
     public enum TransactionTypeEnum
     {

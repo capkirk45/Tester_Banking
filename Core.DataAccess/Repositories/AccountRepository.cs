@@ -1,12 +1,12 @@
-﻿using Core.Common.Entities;
-using Core.Common.Enums;
+﻿using Banking.Core.Common.Entities;
+using Banking.Core.Common.Enums;
 using System.Collections.Generic;
 using System.Linq;
 using System;
-using Core.Common.Interfaces;
+using Banking.Core.Common.Interfaces;
 using MoreLinq;
 
-namespace Core.DataAccess
+namespace Banking.Core.DataAccess
 {
     /// <summary>
     /// Purpose:  CRUD processing against Data Store

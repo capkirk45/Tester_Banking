@@ -1,13 +1,13 @@
-﻿using Core.Business;
-using Core.Business.Factories;
-using Core.Common.Entities;
-using Core.Common.Enums;
-using Core.Common.Interfaces;
-using Core.DataAccess;
+﻿using Banking.Core.Business;
+using Banking.Core.Business.Factories;
+using Banking.Core.Common.Entities;
+using Banking.Core.Common.Enums;
+using Banking.Core.Common.Interfaces;
+using Banking.Core.DataAccess;
 using System;
 using System.Collections.Generic;
 
-namespace Core.Tests
+namespace Banking.Core.Tests
 {
     public class TestBase
     {

@@ -1,12 +1,7 @@
-﻿using Core.Common.Entities;
-using Core.Common.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using Banking.Core.Common.Interfaces;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Core.DataAccess.Extensions
+namespace Banking.Core.DataAccess.Extensions
 {
     public static class AccountExtension
     {

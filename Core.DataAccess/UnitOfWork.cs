@@ -1,7 +1,7 @@
-﻿using Core.Common.Interfaces;
-using Core.DataStore;
+﻿using Banking.Core.Common.Interfaces;
+using Banking.Core.DataStore;
 
-namespace Core.DataAccess
+namespace Banking.Core.DataAccess
 {
     /// <summary>
     /// Contains Repositories used to interact with data stores

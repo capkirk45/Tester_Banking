@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Common.Interfaces
+namespace Banking.Core.Common.Interfaces
 {
     public interface IDataMockManager: IEnumerable
     {

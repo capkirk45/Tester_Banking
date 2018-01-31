@@ -1,8 +1,8 @@
-﻿using Core.Common.Entities;
+﻿using Banking.Core.Common.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace Core.Common.Interfaces
+namespace Banking.Core.Common.Interfaces
 {
     public interface IAccountRepository
     {

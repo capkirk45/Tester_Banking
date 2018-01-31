@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Core.DataAccess", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Core.DataStore", "Core.DataStore\Banking.Core.DataStore.csproj", "{F79A7936-7637-4730-BC48-C177E8DC61FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Web.Client", "Web.Client.Banking\Banking.Web.Client.csproj", "{55B2818F-0C44-482E-B55D-D9C63CAD567A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Client.Web", "Web.Client.Banking\Banking.Client.Web.csproj", "{55B2818F-0C44-482E-B55D-D9C63CAD567A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.NETCore.API", "Web.CoreAPI.Banking\Banking.NETCore.API.csproj", "{16AF095D-5699-4A07-8F0A-02BBDE982B44}"
 EndProject

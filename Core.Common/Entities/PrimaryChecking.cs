@@ -1,4 +1,4 @@
-﻿namespace Core.Common.Entities
+﻿namespace Banking.Core.Common.Entities
 {
     public class PrimaryChecking : AccountBase
     {

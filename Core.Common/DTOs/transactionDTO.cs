@@ -1,11 +1,7 @@
-﻿using Core.Common.Enums;
+﻿using Banking.Core.Common.Enums;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Core.Common.DTOs
+namespace Banking.Core.Common.DTOs
 {
     public class transactionDTO
     {

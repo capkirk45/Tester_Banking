@@ -1,4 +1,4 @@
-﻿namespace Core.Common.Interfaces
+﻿namespace Banking.Core.Common.Interfaces
 {
     public interface IUnitOfWork
     {

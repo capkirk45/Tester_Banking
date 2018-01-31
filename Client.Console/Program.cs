@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client.Console
+namespace Banking.Client.Console
 {
     class Program
     {

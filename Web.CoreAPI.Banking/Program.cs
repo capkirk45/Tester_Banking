@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Web.CoreAPI.Banking
+namespace Banking.NETCore.API
 {
     public class Program
     {

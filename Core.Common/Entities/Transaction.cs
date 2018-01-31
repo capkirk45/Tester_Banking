@@ -1,8 +1,8 @@
-﻿using Core.Common.Enums;
-using Core.Common.Interfaces;
+﻿using Banking.Core.Common.Enums;
+using Banking.Core.Common.Interfaces;
 using System;
 
-namespace Core.Common.Entities
+namespace Banking.Core.Common.Entities
 {
     public class Transaction
     {

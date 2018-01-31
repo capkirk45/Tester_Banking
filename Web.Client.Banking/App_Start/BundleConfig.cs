@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Web.Client.Banking
+namespace Banking.Client.Web
 {
     public class BundleConfig
     {
