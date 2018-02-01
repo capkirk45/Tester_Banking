@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Banking.Core.Common.Entities;
+using Banking.AppCore.Common.Entities;
 
-namespace Banking.Core.DataStore
+namespace Banking.AppCore.DataStore
 {
     /// <summary>
     /// In-memory data store, taking place of a database.  

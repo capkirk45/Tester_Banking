@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Banking.Core.Common.Enums;
+using Banking.AppCore.Common.Enums;
 
-namespace Banking.Core.Tests
+namespace Banking.AppCore.Tests
 {
     [TestClass]
     public class TestAccountManager : TestBase

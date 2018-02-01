@@ -1,8 +1,8 @@
-﻿using Banking.Core.Common.Enums;
-using Banking.Core.Common.Interfaces;
+﻿using Banking.AppCore.Common.Enums;
+using Banking.AppCore.Common.Interfaces;
 using System.Collections.Generic;
 
-namespace Banking.Core.Common.Entities
+namespace Banking.AppCore.Common.Entities
 {
     public class AccountBase: IAccount
     {

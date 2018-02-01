@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Banking.Core.Common.Enums
+namespace Banking.AppCore.Common.Enums
 {
     public enum ClaimTypeEnum
     {

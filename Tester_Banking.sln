@@ -9,17 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Client.Web\global.json = Client.Web\global.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Core.Business", "Core.Business\Banking.Core.Business.csproj", "{75A451A6-0D82-422A-8813-918DF2F48837}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.AppCore.Business", "Core.Business\Banking.AppCore.Business.csproj", "{75A451A6-0D82-422A-8813-918DF2F48837}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Client.Console", "Client.Console\Banking.Client.Console.csproj", "{B3C0A4C5-7EC0-457F-B24F-21329CEAF948}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Core.Common", "Core.Common\Banking.Core.Common.csproj", "{769BEACB-5F89-48F1-BBDA-B90971669AF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.AppCore.Common", "Core.Common\Banking.AppCore.Common.csproj", "{769BEACB-5F89-48F1-BBDA-B90971669AF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Core.Tests", "Core.Tests\Banking.Core.Tests.csproj", "{CC17084A-EB80-4215-84CC-FC91E7CC562C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.AppCore.Tests", "Core.Tests\Banking.AppCore.Tests.csproj", "{CC17084A-EB80-4215-84CC-FC91E7CC562C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Core.DataAccess", "Core.DataAccess\Banking.Core.DataAccess.csproj", "{91793371-1C74-46E6-BF2B-689463728D0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.AppCore.DataAccess", "Core.DataAccess\Banking.AppCore.DataAccess.csproj", "{91793371-1C74-46E6-BF2B-689463728D0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Core.DataStore", "Core.DataStore\Banking.Core.DataStore.csproj", "{F79A7936-7637-4730-BC48-C177E8DC61FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.AppCore.DataStore", "Core.DataStore\Banking.AppCore.DataStore.csproj", "{F79A7936-7637-4730-BC48-C177E8DC61FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Client.Web", "Web.Client.Banking\Banking.Client.Web.csproj", "{55B2818F-0C44-482E-B55D-D9C63CAD567A}"
 EndProject

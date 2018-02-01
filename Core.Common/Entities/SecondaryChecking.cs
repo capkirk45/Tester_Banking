@@ -1,4 +1,4 @@
-﻿namespace Banking.Core.Common.Entities
+﻿namespace Banking.AppCore.Common.Entities
 {
     public class SecondaryChecking : AccountBase
     {

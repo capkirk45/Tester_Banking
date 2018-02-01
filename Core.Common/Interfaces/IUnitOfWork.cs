@@ -1,6 +1,8 @@
-﻿namespace Banking.Core.Common.Interfaces
+﻿using System;
+
+namespace Banking.AppCore.Common.Interfaces
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork: IDisposable
     {
         IAccountRepository AccountRepository { get; }
 

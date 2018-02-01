@@ -1,4 +1,4 @@
-﻿namespace Banking.Core.Common.Enums
+﻿namespace Banking.AppCore.Common.Enums
 {
     public enum AccountTypeEnum
     {

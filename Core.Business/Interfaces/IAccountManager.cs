@@ -1,8 +1,8 @@
-﻿using Banking.Core.Common.Entities;
+﻿using Banking.AppCore.Common.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace Banking.Core.Business.Interfaces
+namespace Banking.AppCore.Business.Interfaces
 {
     public interface IAccountManager
     {

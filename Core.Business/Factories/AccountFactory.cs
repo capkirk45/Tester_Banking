@@ -1,10 +1,10 @@
-﻿using Banking.Core.Common.Enums;
-using Banking.Core.Common.Interfaces;
+﻿using Banking.AppCore.Common.Enums;
+using Banking.AppCore.Common.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Banking.Core.Business.Factories
+namespace Banking.AppCore.Business.Factories
 {
     public class AccountFactory
     {
@@ -40,7 +40,7 @@ namespace Banking.Core.Business.Factories
         private void LoadAccountTypes()
         {
             _accounts = new Dictionary<string, Type>();
-            Assembly a = Assembly.Load("Banking.Core.Common");
+            Assembly a = Assembly.Load("Banking.AppCore.Common");
             Type[] types = a.GetTypes();
 
             foreach(Type t in types)

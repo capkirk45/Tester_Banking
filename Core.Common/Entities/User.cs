@@ -1,6 +1,6 @@
-﻿using Banking.Core.Common.Interfaces;
+﻿using Banking.AppCore.Common.Interfaces;
 
-namespace Banking.Core.Common.Entities
+namespace Banking.AppCore.Common.Entities
 {
     public class User
     {

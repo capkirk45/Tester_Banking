@@ -1,12 +1,12 @@
-﻿using Banking.Core.Common.Entities;
-using Banking.Core.Common.Enums;
+﻿using Banking.AppCore.Common.Entities;
+using Banking.AppCore.Common.Enums;
 using System.Collections.Generic;
 using System.Linq;
 using System;
-using Banking.Core.Common.Interfaces;
+using Banking.AppCore.Common.Interfaces;
 using MoreLinq;
 
-namespace Banking.Core.DataAccess
+namespace Banking.AppCore.DataAccess
 {
     /// <summary>
     /// Purpose:  CRUD processing against Data Store
@@ -39,7 +39,7 @@ namespace Banking.Core.DataAccess
             return (from qry in _uow.MasterLedger.Ledger
                     where qry.Type == TransactionTypeEnum.Debit
                         select qry).OrderBy(t => t.TransactionDate).ToList();
-        }
+        }   
 
         public IEnumerable<Transaction> GetAllCredits()
         {

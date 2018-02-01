@@ -10,8 +10,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Business\Banking.AppCore.Business.csproj" />
+    <ProjectReference Include="..\Core.Common\Banking.AppCore.Common.csproj" />
+    <ProjectReference Include="..\Core.DataAccess\Banking.AppCore.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

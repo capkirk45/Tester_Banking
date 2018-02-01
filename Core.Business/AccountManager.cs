@@ -1,10 +1,10 @@
 ﻿using System;
-using Banking.Core.Common.Entities;
-using Banking.Core.Business.Interfaces;
-using Banking.Core.Common.Interfaces;
+using Banking.AppCore.Common.Entities;
+using Banking.AppCore.Business.Interfaces;
+using Banking.AppCore.Common.Interfaces;
 using System.Collections.Generic;
 
-namespace Banking.Core.Business
+namespace Banking.AppCore.Business
 {
     /// <summary>
     /// Domain / Business logical processing

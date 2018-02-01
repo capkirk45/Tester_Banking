@@ -1,13 +1,13 @@
-﻿using Banking.Core.Business;
-using Banking.Core.Business.Factories;
-using Banking.Core.Common.Entities;
-using Banking.Core.Common.Enums;
-using Banking.Core.Common.Interfaces;
-using Banking.Core.DataAccess;
+﻿using Banking.AppCore.Business;
+using Banking.AppCore.Business.Factories;
+using Banking.AppCore.Common.Entities;
+using Banking.AppCore.Common.Enums;
+using Banking.AppCore.Common.Interfaces;
+using Banking.AppCore.DataAccess;
 using System;
 using System.Collections.Generic;
 
-namespace Banking.Core.Tests
+namespace Banking.AppCore.Tests
 {
     public class TestBase
     {
@@ -26,7 +26,7 @@ namespace Banking.Core.Tests
             _acctMgr = new AccountManager(_primaryChecking, _uow);
         }
 
-        protected Transaction MockTransaction(TransactionTypeEnum type, decimal amt)
+        protected Transaction MockTransaction(string type, decimal amt)
         {
             var id = _uow.AccountRepository.CreateId();
             if (id == 0) throw new Exception("A valid ID could not be created");

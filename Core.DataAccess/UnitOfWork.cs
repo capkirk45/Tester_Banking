@@ -1,14 +1,15 @@
-﻿using Banking.Core.Common.Interfaces;
-using Banking.Core.DataStore;
+﻿using Banking.AppCore.Common.Interfaces;
+using Banking.AppCore.DataStore;
+using System;
 
-namespace Banking.Core.DataAccess
+namespace Banking.AppCore.DataAccess
 {
     /// <summary>
     /// Contains Repositories used to interact with data stores
     /// </summary>
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        private AccountRepository _accountRepo;
+        private AccountRepository _accountRepository;
         private MasterLedger _masterLedger;
 
         public UnitOfWork()
@@ -22,12 +23,17 @@ namespace Banking.Core.DataAccess
         {
             get
             {
-                if (_accountRepo == null)
+                if (_accountRepository == null)
                 {
-                    _accountRepo = new AccountRepository(this);
+                    _accountRepository = new AccountRepository(this);
                 }
-                return _accountRepo;
+                return _accountRepository;
             }
        }
+
+        public void Dispose()
+        {
+            _accountRepository.Dispose();
+        }
     }
 }

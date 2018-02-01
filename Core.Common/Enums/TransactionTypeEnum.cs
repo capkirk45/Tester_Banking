@@ -1,8 +1,10 @@
-﻿namespace Banking.Core.Common.Enums
+﻿using System;
+
+namespace Banking.AppCore.Common.Enums
 {
-    public enum TransactionTypeEnum
+    public static class TransactionTypeEnum
     {
-        Debit,
-        Credit
+        public const string Debit = "debit";
+        public const string Credit = "credit";
     }
 }

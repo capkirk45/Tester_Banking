@@ -1,7 +1,7 @@
-﻿using Banking.Core.Common.Interfaces;
+﻿using Banking.AppCore.Common.Interfaces;
 using System.Linq;
 
-namespace Banking.Core.DataAccess.Extensions
+namespace Banking.AppCore.DataAccess.Extensions
 {
     public static class AccountExtension
     {

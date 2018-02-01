@@ -1,11 +1,11 @@
-﻿using Banking.Core.Common.Enums;
+﻿using Banking.AppCore.Common.Enums;
 using System;
 
-namespace Banking.Core.Common.DTOs
+namespace Banking.AppCore.Common.DTOs
 {
-    public class transactionDTO
+    public class TransactionDTO
     {
-        public TransactionTypeEnum Type { get; set; }
+        public string Type { get; set; }
         public decimal Amt { get; set; }
         public DateTimeOffset TransactionDateUtcOffset { get; set; }
     }
