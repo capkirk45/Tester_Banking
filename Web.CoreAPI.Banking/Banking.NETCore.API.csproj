@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <AssemblyName>Banking.NETCore.API</AssemblyName>
   </PropertyGroup>
 
@@ -22,6 +22,12 @@
     <ProjectReference Include="..\Core.Business\Banking.AppCore.Business.csproj" />
     <ProjectReference Include="..\Core.Common\Banking.AppCore.Common.csproj" />
     <ProjectReference Include="..\Core.DataAccess\Banking.AppCore.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

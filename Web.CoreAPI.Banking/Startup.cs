@@ -1,4 +1,6 @@
-﻿using Banking.AppCore.Common.DTOs;
+﻿using Banking.AppCore.Business;
+using Banking.AppCore.Business.Interfaces;
+using Banking.AppCore.Common.DTOs;
 using Banking.AppCore.Common.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +18,7 @@ namespace Banking.NETCore.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddScoped<IAccountManager, AccountManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,7 +38,8 @@ namespace Banking.NETCore.API
             app.UseStatusCodePages();
             AutoMapper.Mapper.Initialize(m =>
             {
-                m.CreateMap<Transaction, TransactionDTO>();           
+                m.CreateMap<Transaction, TransactionDTO>();
+                m.CreateMap<TransactionDTO, Transaction>();
             });
             app.UseMvc();
 

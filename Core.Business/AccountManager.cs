@@ -14,6 +14,7 @@ namespace Banking.AppCore.Business
         private IAccount _account;
         private IUnitOfWork _uow;
 
+        public AccountManager() { }
         public AccountManager(IAccount account, IUnitOfWork uow)
         {
             _account = account;
