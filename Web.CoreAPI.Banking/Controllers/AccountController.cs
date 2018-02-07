@@ -20,10 +20,10 @@ namespace Banking.NETCore.API.Controllers
         private ILogger<AccountController> _logger;
         private IAccountManager _acctMgr;
 
-        public AccountController(ILogger<AccountController> logger, IAccountManager acctMgr)
+        public AccountController(ILogger<AccountController> logger)
         {
             _logger = logger;
-            _acctMgr = acctMgr;
+            //_acctMgr = acctMgr;
         }
 
         [HttpPost]
